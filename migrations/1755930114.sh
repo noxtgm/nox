@@ -1,7 +1,7 @@
 echo "Add new nox Menu icon to Waybar"
 
 mkdir -p ~/.local/share/fonts
-cp ~/.local/share/nox/config/nox.ttf ~/.local/share/fonts/
+cp ~/.local/share/nox/config/omarchy.ttf ~/.local/share/fonts/
 fc-cache
 
 echo
