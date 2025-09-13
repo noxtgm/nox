@@ -11,4 +11,3 @@ if INTEL_GPU=$(lspci | grep -iE 'vga|3d|display' | grep -i 'intel'); then
     sudo pacman -S --needed --noconfirm libva-intel-driver
   fi
 fi
-

@@ -1,36 +1,47 @@
 #!/bin/bash
 
-ansi_art='                 ▄▄▄                                                   
- ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄ 
-███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
-███   ███  ███   ███   ███  ███   ███  ███   ███  ███   █▀   ███   ███  ███   ███
-███   ███  ███   ███   ███ ▄███▄▄▄███ ▄███▄▄▄██▀  ███       ▄███▄▄▄███▄ ███▄▄▄███
-███   ███  ███   ███   ███ ▀███▀▀▀███ ▀███▀▀▀▀    ███      ▀▀███▀▀▀███  ▀▀▀▀▀▀███
-███   ███  ███   ███   ███  ███   ███ ██████████  ███   █▄   ███   ███  ▄██   ███
-███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
- ▀█████▀    ▀█   ███   █▀   ███   █▀   ███   ███  ███████▀   ███   █▀    ▀█████▀ 
-                                       ███   █▀                                  '
+ansi_art='
+       ██████    █████████                █████████████               ████████       ███████     
+       ██████    █████████                ██████████████             █████████       ███████     
+████████████████████████████         █████████████████████       ████████████          ██████████
+█████████████████    ███████         ██████████████████████      ███████████             ████████
+  ███████████████    ███████         ██████████████████████         ████████            ████████ 
+    ████████         ████████                     ██████████         ██████████       ███████    
+    ████████         ████████                     ██████████         ████████████    ███████     
+    ████████         ████████        █████            ████████           ██████████████████      
+     ███████         ████████        █████            ████████           █████████████████       
+     ███████         ████████    █████████            ████████              ████████████         
+     ███████         ████████    █████████            ████████               ██████████          
+     ███████         ████████    █████████            ████████           █████████████████       
+     ███████         ████████    █████████            ████████          ███████████████████     
+     ███████         ████████    ████████████         ████████       ██████████████████████     
+    ████████         ████████        █████████        ████████       ███████       █████████    
+    ████████         ███████         █████████        ████████       ██████        █████████    
+    ████████         ███████         ███████████████████████     ██████████           ██████████
+    ████████         ███████          ████████████████████       ██████████            █████████
+   ██████           ██████                ██████████████             ██████████        ███████  
+   ██████           ██████                 ███████████                █████████        █████    '
 
 clear
 echo -e "\n$ansi_art\n"
 
 sudo pacman -Syu --noconfirm --needed git
 
-# Use custom repo if specified, otherwise default to basecamp/omarchy
-OMARCHY_REPO="${OMARCHY_REPO:-basecamp/omarchy}"
+# Use custom repo if specified, otherwise default to noxtgm/nox
+NOX_REPO="${NOX_REPO:-noxtgm/nox}"
 
-echo -e "\nCloning Omarchy from: https://github.com/${OMARCHY_REPO}.git"
-rm -rf ~/.local/share/omarchy/
-git clone "https://github.com/${OMARCHY_REPO}.git" ~/.local/share/omarchy >/dev/null
+echo -e "\nCloning nox from: https://github.com/${NOX_REPO}.git"
+rm -rf ~/.local/share/nox/
+git clone "https://github.com/${NOX_REPO}.git" ~/.local/share/nox >/dev/null
 
 # Use custom branch if instructed, otherwise default to master
-OMARCHY_REF="${OMARCHY_REF:-master}"
-if [[ $OMARCHY_REF != "master" ]]; then
-  echo -e "\eUsing branch: $OMARCHY_REF"
-  cd ~/.local/share/omarchy
-  git fetch origin "${OMARCHY_REF}" && git checkout "${OMARCHY_REF}"
+NOX_REF="${NOX_REF:-master}"
+if [[ $NOX_REF != "master" ]]; then
+  echo -e "\eUsing branch: $NOX_REF"
+  cd ~/.local/share/nox
+  git fetch origin "${NOX_REF}" && git checkout "${NOX_REF}"
   cd -
 fi
 
 echo -e "\nInstallation starting..."
-source ~/.local/share/omarchy/install.sh
+source ~/.local/share/nox/install.sh

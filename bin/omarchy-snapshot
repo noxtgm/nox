@@ -1,20 +1,20 @@
 #!/bin/bash
 
 COMMAND="$1"
-OMARCHY_PATH=${OMARCHY_PATH:-$HOME/.local/share/omarchy}
+NOX_PATH=${NOX_PATH:-$HOME/.local/share/nox}
 
 if [[ -z $COMMAND ]]; then
-  echo "Usage: omarchy-snapshot <create|restore>" >&2
+  echo "Usage: nox-snapshot <create|restore>" >&2
   exit 1
 fi
 
 if ! command -v snapper &>/dev/null; then
-  exit 127 # omarchy-update can use this to just ignore if snapper is not available
+  exit 127 # nox-update can use this to just ignore if snapper is not available
 fi
 
 case "$COMMAND" in
 create)
-  DESC="$(omarchy-version)"
+  DESC="$(nox-version)"
 
   echo -e "\e[32mCreate system snapshot\e[0m"
   

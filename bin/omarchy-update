@@ -2,9 +2,9 @@
 
 set -e
 
-omarchy-snapshot create || [ $? -eq 127 ]
-omarchy-update-git
-omarchy-migrate
-omarchy-update-system-pkgs
-omarchy-update-restart
-omarchy-restart-waybar # removes update-available icon
+nox-snapshot create || [ $? -eq 127 ]
+nox-update-git
+nox-migrate
+nox-update-system-pkgs
+nox-update-restart
+nox-restart-waybar # removes update-available icon

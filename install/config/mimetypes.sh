@@ -1,6 +1,6 @@
 #!/bin/bash
 
-omarchy-refresh-applications
+nox-refresh-applications
 update-desktop-database ~/.local/share/applications
 
 # Open all images with imv

@@ -1,6 +1,6 @@
-echo "Allow updating of timezone by right-clicking on the clock (or running omarchy-cmd-tzupdate)"
+echo "Allow updating of timezone by right-clicking on the clock (or running nox-cmd-tzupdate)"
 
-if omarchy-cmd-missing tzupdate; then
-  $OMARCHY_PATH/install/config/timezones.sh
-  omarchy-refresh-waybar
+if nox-cmd-missing tzupdate; then
+  $NOX_PATH/install/config/timezones.sh
+  nox-refresh-waybar
 fi

@@ -2,9 +2,9 @@
 
 # Set default XCompose that is triggered with CapsLock
 tee ~/.XCompose >/dev/null <<EOF
-include "%H/.local/share/omarchy/default/xcompose"
+include "%H/.local/share/nox/default/xcompose"
 
 # Identification
-<Multi_key> <space> <n> : "$OMARCHY_USER_NAME"
-<Multi_key> <space> <e> : "$OMARCHY_USER_EMAIL"
+<Multi_key> <space> <n> : "$NOX_USER_NAME"
+<Multi_key> <space> <e> : "$NOX_USER_EMAIL"
 EOF

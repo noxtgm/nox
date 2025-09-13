@@ -1,3 +1,3 @@
 echo "Add chromium-flags.conf"
 
-omarchy-refresh-config chromium-flags.conf
+nox-refresh-config chromium-flags.conf

@@ -1,6 +1,6 @@
-echo "Update fastfetch config with new Omarchy logo"
+echo "Update fastfetch config with new nox logo"
 
-omarchy-refresh-config fastfetch/config.jsonc
+nox-refresh-config fastfetch/config.jsonc
 
-mkdir -p ~/.config/omarchy/branding
-cp $OMARCHY_PATH/icon.txt ~/.config/omarchy/branding/about.txt
+mkdir -p ~/.config/nox/branding
+cp $NOX_PATH/icon.txt ~/.config/nox/branding/about.txt

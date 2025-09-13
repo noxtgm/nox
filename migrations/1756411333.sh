@@ -1,3 +1,3 @@
-echo "Use new Omarchy mirror as default"
+echo "Use new nox mirror as default"
 
-omarchy-refresh-pacman-mirrorlist
+nox-refresh-pacman-mirrorlist

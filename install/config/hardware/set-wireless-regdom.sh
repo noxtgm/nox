@@ -33,4 +33,3 @@ if [ ! -n "${WIRELESS_REGDOM}" ]; then
     fi
   fi
 fi
-
